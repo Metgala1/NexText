@@ -13,7 +13,7 @@ function ConversationPreview({ contact }) {
 
       <div className={styles.messages}>
         <div className={styles.messageIncoming}>
-          Hey 👋 this is the beginning of your conversation with {contact.name}
+          {contact.last}
         </div>
       </div>
 
