@@ -3,30 +3,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg,#f8fafc,#ffffff);
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
 }
 
 .card {
   width: 420px;
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(16,24,40,0.06);
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
   padding: 28px;
   box-sizing: border-box;
 }
 
-h1{
-    color: black;
-    margin-bottom: 15px;
-    color: #10b981;
-    margin-top: 0;
-    margin-bottom: 20px;
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #10b981;
 }
 
-p{
-    color: black;
-    font-size: 14px;
+p {
+  color: #374151;
+  font-size: 14px;
+  margin-bottom: 12px;
 }
 
 .title {
@@ -43,7 +44,7 @@ p{
 }
 
 .label {
-  font-size: 20px;
+  font-size: 14px;
   color: #374151;
   display: block;
   text-align: left;
@@ -58,18 +59,28 @@ p{
   outline: none;
   font-size: 14px;
   display: block;
-  width: 90%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #10b981;
 }
 
 .primary {
-  margin-top: 8px;
+  margin-top: 12px;
   padding: 10px 12px;
   background: #10b981;
-  color: #fff;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.primary:hover {
+  background: #059669;
 }
 
 .ghost {
@@ -83,8 +94,8 @@ p{
 }
 
 .footer {
-  margin-top: 14px;
-  font-size: 16px;
+  margin-top: 16px;
+  font-size: 14px;
   color: #6b7280;
   text-align: center;
 }
@@ -95,13 +106,14 @@ footer a {
   text-decoration: none;
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 700px) {
   .card {
     width: 100%;
-    margin: 0;
-    padding: 0px 20px;
-  }
-  .container{
-    padding: ;
+    margin: 0 16px;
+    padding: 24px;
   }
 }
