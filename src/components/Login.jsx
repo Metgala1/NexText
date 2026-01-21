@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/SignUp.module.css";
-
+import { Link } from "react-router-dom";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -56,7 +56,7 @@ export default function Login() {
 
         <footer>
           <p className={styles.footer}>
-            Don’t have an account? <a href="#">Create one</a>
+            Don’t have an account? <Link to="/">Create one</Link>
           </p>
         </footer>
       </div>

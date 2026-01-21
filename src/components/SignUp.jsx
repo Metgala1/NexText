@@ -1,5 +1,6 @@
 import  { useState } from "react";
 import styles from "../styles/SignUp.module.css";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
   const [name, setName] = useState("");
@@ -82,7 +83,7 @@ export default function SignUp() {
         <p>By clicking "Create Account" above, you acknowledge that you have read, understood, and agreed to our <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></p>
 
         <p className={styles.footer}>
-          Already have an account?  <a href="#">Log in</a>
+          Already have an account?  <Link to="/login">Log in</Link>
         </p>
         </footer>
       </div>
