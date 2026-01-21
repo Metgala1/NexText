@@ -56,7 +56,7 @@ export default function Login() {
 
         <footer>
           <p className={styles.footer}>
-            Don’t have an account? <Link to="/">Create one</Link>
+            Don’t have an account? <Link to="/signup">Create one</Link>
           </p>
         </footer>
       </div>
