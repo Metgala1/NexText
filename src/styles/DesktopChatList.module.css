@@ -20,7 +20,7 @@
 .brand {
   padding: 16px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 2rem;
   background: #f0f2f5;
   border-bottom: 1px solid #d1d7db;
 }
@@ -29,16 +29,18 @@
 .search {
   padding: 8px 12px;
   background: #f0f2f5;
+  color: black;
 }
 
 .search input {
-  width: 100%;
+  width: 90%;
   padding: 8px 14px;
   border-radius: 8px;
-  border: none;
+  border: 3px solid rgb(209, 205, 205);
   outline: none;
   background: #ffffff;
   font-size: 14px;
+  color: #111b21;
 }
 
 /* CONTACT LIST */
@@ -88,6 +90,7 @@
 .contactName {
   font-weight: 500;
   font-size: 15px;
+  text-align: left;
 }
 
 .contactLast {
@@ -96,6 +99,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: left;
 }
 
 .time {
@@ -163,7 +167,7 @@
 
 /* INCOMING MESSAGE */
 .messageIncoming {
-  max-width: 65%;
+  max-width: 40%;
   background: #ffffff;
   padding: 8px 12px;
   border-radius: 8px;
