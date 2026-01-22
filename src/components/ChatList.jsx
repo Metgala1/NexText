@@ -1,19 +1,25 @@
 import React, { useState } from "react";
 import styles from "../styles/DesktopChatList.module.css";
 import ConversationPreview from "./Conversation.jsx";
-
-const contacts = [
-  { id: 1, name: "Alice", last: "Hey, are you free?", time: "10:12" },
-  { id: 2, name: "Bob", last: "Sent an image", time: "09:45" },
-  { id: 3, name: "Charlie", last: "Thanks!", time: "Yesterday" },
-];
+import { useNavigate } from "react-router-dom";
+import { contacts } from "../data/chat.js";
 
 export default function DesktopChatList() {
   const [activeChat, setActiveChat] = useState(null);
+  const navigate = useNavigate();
+
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  const handleClick = (chat) => {
+    if (isMobile) {
+      navigate(`/chats/${chat.id}`);
+    } else {
+      setActiveChat(chat);
+    }
+  };
 
   return (
     <div className={styles.app}>
-      {/* Sidebar */}
       <aside className={styles.sidebar}>
         <div className={styles.brand}>NextText</div>
 
@@ -25,10 +31,8 @@ export default function DesktopChatList() {
           {contacts.map((c) => (
             <li
               key={c.id}
-              className={`${styles.contactItem} ${
-                activeChat?.id === c.id ? styles.active : ""
-              }`}
-              onClick={() => setActiveChat(c)}
+              className={styles.contactItem}
+              onClick={() => handleClick(c)}
             >
               <div className={styles.avatar}>{c.name.charAt(0)}</div>
 
@@ -43,7 +47,7 @@ export default function DesktopChatList() {
         </ul>
       </aside>
 
-      {/* Main Preview */}
+      {/* Desktop only */}
       <main className={styles.mainPreview}>
         {!activeChat ? (
           <div className={styles.placeholder}>
@@ -56,5 +60,3 @@ export default function DesktopChatList() {
     </div>
   );
 }
-
-
