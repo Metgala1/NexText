@@ -13,7 +13,9 @@ function ConversationPreview({ contact }) {
 
       <div className={styles.messages}>
         <div className={styles.messageIncoming}>
-          {contact.last}
+          <p className={styles.message}>{contact.last}</p>
+          <p className={styles.time}>{contact.time}</p>
+           
         </div>
       </div>
 
