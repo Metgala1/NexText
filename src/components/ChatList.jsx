@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { contacts } from "../data/chat.js";
 import { ChatBubbleLeftIcon, PhoneIcon,  UserGroupIcon,  
   BuildingStorefrontIcon , ArchiveBoxIcon, MegaphoneIcon,
-PhotoIcon, CogIcon  } from "@heroicons/react/24/outline";
+PhotoIcon, CogIcon, PencilIcon ,  Bars3Icon } from "@heroicons/react/24/outline";
 import { HiStatusOnline } from "react-icons/hi"
 
 export default function DesktopChatList() {
@@ -57,7 +57,13 @@ export default function DesktopChatList() {
         </div>
         <div className={styles.sidebarContent}>
 
-        <div className={styles.brand}>NextText</div>
+        <div className={styles.brandDiv}>
+          <p className={styles.brand}>NextText</p>
+          <div className={styles.newMessage}>
+            <PencilIcon  width={30} />
+            <Bars3Icon width={30} />
+          </div>
+          </div>
 
         <div className={styles.search}>
           <input placeholder="Search or start new chat" />
