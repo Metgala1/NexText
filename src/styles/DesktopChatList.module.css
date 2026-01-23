@@ -6,14 +6,41 @@
   color: #111b21;
   background: #efeae2;
 }
-
-/* SIDEBAR */
 .sidebar {
-  width: 400px;
+  flex: 0.8;
+  display: flex;
+}
+/* SIDEBAR */
+.sidebarContent {
+  /* width: 400px; */
   display: flex;
   flex-direction: column;
   background: #ffffff;
   border-right: 1px solid #d1d7db;
+  flex: 1;
+}
+
+.asideSettings{
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  max-width: 100px;
+  background: #ffffff96;
+  border-right: 1px solid rgba(0, 0, 0, 0.11);
+  justify-content: space-between;
+  padding-bottom: 80%;
+  padding-top: 15%;
+
+
+}
+
+.asideSettings div:hover {
+  background: lightgreen;
+  cursor: pointer;
+}
+.icon:hover{
+  background: lightgreen;
+  width: 80px;
 }
 
 /* BRAND (WhatsApp header) */
