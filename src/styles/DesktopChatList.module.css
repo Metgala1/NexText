@@ -245,11 +245,17 @@
 @media (max-width: 768px) {
   .app {
     flex-direction: column;
+    height: 100vh;
   }
 
   .sidebar {
     width: 100%;
     border-right: none;
+    flex-direction: column-reverse;
+  }
+  .asideSettings{
+    flex-direction: row;
+    width: 100%;
   }
 
   .mainPreview {
