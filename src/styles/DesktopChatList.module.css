@@ -6,13 +6,14 @@
   color: #111b21;
   background: #efeae2;
 }
+
 .sidebar {
   flex: 0.8;
   display: flex;
 }
+
 /* SIDEBAR */
 .sidebarContent {
-  /* width: 400px; */
   display: flex;
   flex-direction: column;
   background: #ffffff;
@@ -20,41 +21,20 @@
   flex: 1;
 }
 
-.asideSettings{
-  display: flex;
-  flex-direction: column;
-  width: 80px;
-  max-width: 100px;
-  background: #ffffff96;
-  border-right: 1px solid rgba(0, 0, 0, 0.11);
-  justify-content: space-between;
-  padding-bottom: 80%;
-  padding-top: 15%;
-
-
-}
-.brandDiv{
+.brandDiv {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
 }
-.newMessage{
+
+.newMessage {
   display: flex;
   justify-content: space-evenly;
   width: 25%;
 }
 
-.asideSettings div:hover {
-  background: lightgreen;
-  cursor: pointer;
-}
-.icon:hover{
-  background: lightgreen;
-  width: 80px;
-}
-
-/* BRAND (WhatsApp header) */
+/* BRAND */
 .brand {
   padding: 16px;
   font-weight: 600;
@@ -143,6 +123,8 @@
 .time {
   font-size: 12px;
   color: #667781;
+  text-align: right;
+  color: green;
 }
 
 /* MAIN PREVIEW */
@@ -213,7 +195,6 @@
   margin-bottom: 8px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
   text-align: left;
-  
 }
 
 /* MESSAGE INPUT */
@@ -233,32 +214,31 @@
   font-size: 20px;
   color: #111b21;
 }
-.message{
 
-}
-.time{
-  text-align: right;
-  color: green;
-}
-
+/* MOBILE */
 /* MOBILE */
 @media (max-width: 768px) {
   .app {
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
   }
 
   .sidebar {
     width: 100%;
     border-right: none;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    height: 100%;
   }
-  .asideSettings{
-    flex-direction: row;
-    width: 100%;
+
+  .sidebarContent {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 70px; /* 🔥 space for bottom nav */
   }
 
   .mainPreview {
     display: none;
   }
 }
+

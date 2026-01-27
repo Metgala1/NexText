@@ -1,0 +1,66 @@
+.asideSettings {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  background: #ffffff;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+/* Each icon wrapper */
+.asideSettings > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  transition: background 0.2s ease;
+}
+
+.asideSettings > div:hover {
+  background: #f0f2f5;
+  cursor: pointer;
+}
+
+/* Icon sizing */
+.icon {
+  width: 26px;
+  height: 26px;
+  color: #54656f;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.15);
+  color: #25d366;
+}
+
+/* 📱 MOBILE — TURN INTO BOTTOM NAV */
+@media (max-width: 768px) {
+  .asideSettings {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-right: none;
+    border-top: 1px solid #d1d7db;
+    background: #ffffff;
+    z-index: 1000;
+    padding: 0;
+  }
+
+  .asideSettings > div {
+    padding: 0;
+    flex: 1;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
