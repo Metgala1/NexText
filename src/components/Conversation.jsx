@@ -1,5 +1,5 @@
 import styles from '../styles/Conversation.module.css';
-import { ArrowLeftIcon, PhoneIcon , VideoCameraIcon} from "@heroicons/react/24/outline";
+import { ArrowLeftIcon, PhoneIcon , VideoCameraIcon, PaperAirplaneIcon} from "@heroicons/react/24/outline";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -52,6 +52,10 @@ function ConversationPreview({ contact }) {
           className={styles.messageInputField}
           placeholder="Type a message"
         />
+        <button className={styles.sendBtn}>
+         <PaperAirplaneIcon width={22} />
+       </button>
+
       </div>
     </div>
   );

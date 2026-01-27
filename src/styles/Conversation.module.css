@@ -123,6 +123,7 @@
   border-top: 1px solid #d1d7db;
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .messageInputField {
@@ -134,6 +135,30 @@
   background: #ffffff;
   font-size: 14px;
 }
+
+.sendBtn {
+  background: #25d366;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.sendBtn:hover {
+  background: #20bd5a;
+  transform: scale(1.05);
+}
+
+.sendBtn:active {
+  transform: scale(0.95);
+}
+
 
 /* MOBILE */
 @media (max-width: 768px) {
