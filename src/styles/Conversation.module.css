@@ -59,6 +59,22 @@
   color: #667781;
 }
 
+.backButton {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.backIcon {
+  width: 24px;
+  height: 24px;
+  color: #111b21;
+}
+
+
 /* MESSAGES AREA */
 .messages {
   flex: 1;

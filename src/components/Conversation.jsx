@@ -1,8 +1,12 @@
 import styles from '../styles/Conversation.module.css';
 import { ArrowLeftIcon, PhoneIcon , VideoCameraIcon} from "@heroicons/react/24/outline";
+import { useNavigate } from 'react-router-dom';
 
 
 function ConversationPreview({ contact }) {
+  const navigate = useNavigate();
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
   return (
     <div className={styles.conversation}>
       
@@ -10,7 +14,12 @@ function ConversationPreview({ contact }) {
       <header className={styles.conversationHeader}>
         <div className={styles.headerLeft}>
           <div className={styles.headerInfo}>
-            <ArrowLeftIcon width={25} />
+            {isMobile && (
+           <button className={styles.backButton} onClick={() => navigate(-1)}>
+            <ArrowLeftIcon className={styles.backIcon} />
+           </button>
+         )}
+
           <div className={styles.avatarLarge}>
             {contact.name.charAt(0)}
           </div>
