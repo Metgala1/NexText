@@ -124,6 +124,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  
 }
 
 .messageInputField {
@@ -133,7 +134,7 @@
   border: none;
   outline: none;
   background: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .sendBtn {
